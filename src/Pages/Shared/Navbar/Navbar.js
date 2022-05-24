@@ -14,8 +14,11 @@ const Navbar = () => {
     };
 
     const loginAndReg = <>
-        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
-
+     {
+            user && <Link to="/dashboard"> <button className="btn btn-ghost">Dashboard</button></Link>
+        }
+        {user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}
+    
     </>
     const menuItems = <>
         <li><Link to="/">Home</Link></li>

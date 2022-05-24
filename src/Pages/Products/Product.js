@@ -1,9 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import {  useNavigate } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    const { name, image, description, price, minimumOrder, availableQuantity } = product;
+    const {_id, name, image, description, price, minimumOrder, availableQuantity } = product;
+    const navigate = useNavigate();
+
+    const navigateToServiceDetail = id =>{
+        navigate(`/service/${id}`);
+    }
     return (
         <div className="card lg:max-w-lg bg-base-100  shadow-xl">
             <div className="card-body text-center">
@@ -16,10 +20,7 @@ const Product = ({ product }) => {
                 </div>
                 <div class="card-actions justify-end">
                     <div class="badge">Available Quantity: {availableQuantity}</div>
-                    {/* <button class="btn btn-outline">Purchase</button> */}
-                <p><small>New to Doctors Portal <Link className='text-primary' to="/purchase">Purchase</Link></small></p>
-
-
+                <button  onClick={() => navigateToServiceDetail(_id)}  class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Purchase</button>
                 </div>
             </div>
         </div>

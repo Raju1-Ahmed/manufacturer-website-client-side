@@ -25,7 +25,7 @@ const ServiceDetails = () => {
             email: user.email,
             img: service.img,
             service: service.name,
-            quantity: service.quantity,
+            quantity: service.availableQuantity,
             serviceId: serviceId,
             address: event.target.address.value,
             phone: event.target.phone.value
@@ -65,7 +65,7 @@ const ServiceDetails = () => {
                         <label className="label">
                             <span> Quantity:</span>
                         </label>
-                        <input type="text" value={service.availableQuantity} name="Quantity" className="input input-bordered w-full max-w-xs" required readOnly />
+                        <input type="text" value={service.availableQuantity} name="quantity" className="input input-bordered w-full max-w-xs" required readOnly />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">

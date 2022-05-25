@@ -7,6 +7,9 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
 import RequireAuth from './Pages/Login/RequireAuth';
 import ServiceDetails from './Pages/Products/ServiceDetails';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyCard from './Pages/Dashboard/MyCard';
+import AllUsers from './Pages/Dashboard/AllUsers';
 
 function App() {
   return (
@@ -15,6 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+          <Route path="/dashboard/myCard" element={<MyCard />} />
+          <Route path="/dashboard/users" element={<AllUsers />} />
+          {/* <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route> */}
+        </Route>
         <Route path="/register" element={<Register />} />
         <Route path='/service/:serviceId' element={<RequireAuth><ServiceDetails></ServiceDetails></RequireAuth>}></Route>
       </Routes>

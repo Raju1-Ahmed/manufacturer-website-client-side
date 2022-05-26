@@ -10,6 +10,9 @@ import ServiceDetails from './Pages/Products/ServiceDetails';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyCard from './Pages/Dashboard/MyCard';
 import AllUsers from './Pages/Dashboard/AllUsers';
+import Payment from './Pages/Dashboard/Payment';
+import AddService from './Pages/Dashboard/AddService';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
 
 function App() {
   return (
@@ -21,7 +24,9 @@ function App() {
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route path="/dashboard/myCard" element={<MyCard />} />
           <Route path="/dashboard/users" element={<AllUsers />} />
-          {/* <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route> */}
+          <Route path="/dashboard/manageorder" element={<ManageOrders/>} />
+          <Route path="/dashboard/addservice" element={<AddService/>} />
+          <Route path="/dashboard/payment/:id" element={<Payment />} />
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path='/service/:serviceId' element={<RequireAuth><ServiceDetails></ServiceDetails></RequireAuth>}></Route>

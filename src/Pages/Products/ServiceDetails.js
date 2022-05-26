@@ -8,11 +8,11 @@ import auth from '../../firebase.init';
 const ServiceDetails = () => {
     const { serviceId } = useParams();
     const [service, setService] = useState({});
+    console.log(service.availableQuantity);
+    console.log(service);
     const [user] = useAuthState(auth);
-    console.log(user);
     useEffect(() => {
         const url = `http://localhost:5000/service/${serviceId}`;
-        console.log(url);
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data));
@@ -25,6 +25,8 @@ const ServiceDetails = () => {
             email: user.email,
             img: service.img,
             service: service.name,
+            price: service.price,
+            minimumOrder: service.minimumOrder,
             quantity: service.availableQuantity,
             serviceId: serviceId,
             address: event.target.address.value,
@@ -60,6 +62,18 @@ const ServiceDetails = () => {
                         <label className="label">
                         </label>
                         <input type="text" value={service.name} name="service"  className="input input-bordered w-full max-w-xs" required readOnly />
+                    </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span> Price:</span>
+                        </label>
+                        <input type="text" value={service.price} name="price" className="input input-bordered w-full max-w-xs" required readOnly />
+                    </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span> Minimum Orders:</span>
+                        </label>
+                        <input type="text" value={service.minimumOrder} name="minimumOrder" className="input input-bordered w-full max-w-xs" required readOnly />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">

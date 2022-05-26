@@ -63,14 +63,14 @@ const MyCard = () => {
             <tr>
                 <th>Product Name</th>
                 <th>Order Quantity</th>
-                <th> </th>
+                <th>Products Price</th>
                 <th> </th>
             </tr>
         </thead>
         <tbody>
             {
                 orders.map((order, index) => <ShowMyCard
-                key={order.id}
+                key={order._id}
                 index={index}
                 order={order}
                 >

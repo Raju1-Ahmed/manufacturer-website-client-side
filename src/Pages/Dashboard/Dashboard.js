@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../../hooks/UseAdmin';
 
-const Dashboard = ({role}) => {
+const Dashboard = ({ role }) => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
     return (
@@ -18,11 +18,15 @@ const Dashboard = ({role}) => {
                 <label for="dashboard-sidebar" class="drawer-overlay"></label>
                 <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
                     <li><Link to="/dashboard">Profile</Link></li>
-                    <li><Link to="/dashboard/myCard">My Card</Link></li>
-                    <li><Link to="/dashboard/review">Review</Link></li>
-                    {admin && <li><Link to="/dashboard/users">All Users</Link></li>}
-                    {admin && <li><Link to="/dashboard/addservice">Add Service</Link></li>}
-                    {admin && <li><Link to="/dashboard/manageorder">Manage Order</Link></li>}
+                    {admin ?
+                        <>
+                            <li><Link to="/dashboard/users">All Users</Link></li>
+                            <li><Link to="/dashboard/addservice">Add Service</Link></li>
+                            <li><Link to="/dashboard/manageorder">Manage Order</Link></li> </>
+                        : <>
+                            <li><Link to="/dashboard/myCard">My Card</Link></li>
+                            <li><Link to="/dashboard/addreview">Review</Link></li>
+                        </>}
                 </ul>
 
             </div>

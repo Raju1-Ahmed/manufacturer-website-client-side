@@ -16,6 +16,8 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+    console.log(user);
     
     const [token]  = useToken(user || gUser);
 
@@ -36,7 +38,7 @@ const Register = () => {
     }
 
     const onSubmit = async data => {
-        await createUserWithEmailAndPassword(data.email, data.password);
+        await createUserWithEmailAndPassword(data.name, data.email, data.password);
 
     }
     return (
@@ -51,7 +53,7 @@ const Register = () => {
                                 <span className="label-text">Name</span>
                             </label>
                             <input
-                                type="text"
+                                type="name"
                                 placeholder="Your Name"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("name", {

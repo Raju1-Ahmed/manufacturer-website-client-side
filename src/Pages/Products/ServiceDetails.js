@@ -8,8 +8,6 @@ import auth from '../../firebase.init';
 const ServiceDetails = () => {
     const { serviceId } = useParams();
     const [service, setService] = useState({});
-    console.log(service.availableQuantity);
-    console.log(service);
     const [user] = useAuthState(auth);
     useEffect(() => {
         const url = `http://localhost:5000/service/${serviceId}`;
@@ -51,7 +49,7 @@ const ServiceDetails = () => {
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                         </label>
-                        <input type="email"value={user?.displayName} name="name" placeholder="name" className="input input-bordered w-full max-w-xs" required readOnly  />
+                        <input type="email" value={user?.displayName} name="name" placeholder="name" className="input input-bordered w-full max-w-xs" required readOnly  />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">

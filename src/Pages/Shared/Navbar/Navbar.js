@@ -3,7 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
-
+import menuIcon from '../../../asset/MenuIcons/menuIcon.png'
 const Navbar = () => {
 
     const [user] = useAuthState(auth);
@@ -23,6 +23,7 @@ const Navbar = () => {
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/portfolio">Portfolio </Link></li>
         <li><Link to="/about">About</Link></li>
 
     </>
@@ -37,7 +38,8 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl"><Link to="/">AutoParts</Link></a>
+                <a className="btn btn-ghost normal-case text-xl"><Link to="/">Auto Parts
+                </Link></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

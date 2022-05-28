@@ -1,6 +1,9 @@
 import React from 'react';
 import banner1 from '../../../asset/Banner/banner-1.jpg'
 import banner2 from '../../../asset/Banner/banner-2.jpg'
+import banner3 from '../../../asset/Banner/banner-3.jpg'
+import banner4 from '../../../asset/Banner/banner-4.jpg'
+
 const Banner = () => {
     return (
         <div>
@@ -12,10 +15,10 @@ const Banner = () => {
                     <img src={banner2} class="w-full" />
                 </div>
                 <div id="item3" class="carousel-item w-full">
-                    <img src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6" class="w-full" />
+                    <img src={banner3} class="w-full" />
                 </div>
                 <div id="item4" class="carousel-item w-full">
-                    <img src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693" class="w-full" />
+                    <img src={banner4} class="w-full" />
                 </div>
             </div>
             <div class="flex justify-center w-full py-2 gap-2">

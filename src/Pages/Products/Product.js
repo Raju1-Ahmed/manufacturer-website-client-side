@@ -13,7 +13,7 @@ const Product = ({ product }) => {
             <div className="card-body text-center">
                 <img src={image} alt="" />
                 <h2 className="text-xl font-bold ">{name}</h2>
-                <h4 className='text-sm'>{description.slice(0, 100)}</h4>
+                <h4 className='text-sm text-accent-content'>{description.slice(0, 100)}</h4>
                 <div class="card-actions justify-end">
                     <div class="badge ">Price: {price}$</div>
                     <div class="badge ">Minimum Order: {minimumOrder}</div>

@@ -8,7 +8,6 @@ import ShowMyCard from './ShowMyCard';
 const MyCard = () => {
     const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
-    console.log(orders);
     useEffect(() => {
 
         const getOrders = async () => {

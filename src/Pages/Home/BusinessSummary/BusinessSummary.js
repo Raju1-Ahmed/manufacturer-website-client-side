@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const BusinessSummary = () => {
     return (
-        <div className="">
+        <div className="mb-10">
             <h2 className="text-center text-2xl font-bold">Business Summary...</h2>
 
             <div className='mb-5 w-full flex justify-center'>

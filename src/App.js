@@ -16,6 +16,7 @@ import ManageOrders from './Pages/Dashboard/ManageOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import Blog from './Pages/Shared/Blog/Blog';
 import Portfolio from './Pages/Home/Portfolio/Portfolio';
+import MyProfile from './Pages/Dashboard/MyProfile';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/blog" element={<Blog/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+          <Route path="/dashboard/myprofile" element={<MyProfile />} />
           <Route path="/dashboard/myCard" element={<MyCard />} />
           <Route path="/dashboard/users" element={<AllUsers />} />
           <Route path="/dashboard/manageorder" element={<ManageOrders/>} />

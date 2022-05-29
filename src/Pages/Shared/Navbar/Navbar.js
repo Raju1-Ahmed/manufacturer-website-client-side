@@ -13,19 +13,14 @@ const Navbar = () => {
         localStorage.removeItem('accessToken');
     };
 
-    const loginAndReg = <>
-     {
-            user && <Link to="/dashboard"> <button className="btn btn-ghost">Dashboard</button></Link>
-        }
-        {user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}
-    
-    </>
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/portfolio">Portfolio </Link></li>
-        <li><Link to="/about">About</Link></li>
-
+        {
+            user && <Link to="/dashboard"> <button className="btn btn-ghost">Dashboard</button></Link>
+        }
+        {user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}
     </>
     return (
         <div className="navbar bg-base-100">
@@ -50,7 +45,6 @@ const Navbar = () => {
                 <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
-                {loginAndReg}
             </div>
         </div>
     );

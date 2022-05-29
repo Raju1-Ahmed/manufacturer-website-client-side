@@ -20,7 +20,8 @@ const Navbar = () => {
         {
             user && <Link to="/dashboard"> <button className="btn btn-ghost">Dashboard</button></Link>
         }
-        {user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}
+        {user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> 
+        : <button className="btn btn-ghost">  <Link to="/login">Login</Link></button>}
     </>
     return (
         <div className="navbar bg-base-100">

@@ -61,7 +61,7 @@ const AddService = () => {
                         </label>
                         <input type="number" {...register("quantity")}  className="input input-bordered w-full max-w-xs" />
                     </div>
-                    <input className='btn mt-3 w-full max-w-xs text-white' type="submit" value="Add Product" />
+                    <input className='btn mt-3 w-full max-w-xs text-white' type="submit" value="Add" />
                 </form>
             </div>
         </div>

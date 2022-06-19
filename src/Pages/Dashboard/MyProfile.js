@@ -7,13 +7,11 @@ import ProfileUpdate from './ProfileUpdate';
 const MyProfile = () => {
     const [user] = useAuthState(auth);
     const { email, displayName } = user;
-
+    console.log(user);
     const handleSubmit = (even) => {
         even.preventDefault();
         const profile = {
-            phone: even.target.phone.value,
             location: even.target.location.value,
-            address: even.target.address.value,
             education: even.target.education.value,
             profile: even.target.profile.value,
             email,
@@ -40,21 +38,20 @@ const MyProfile = () => {
             })
     }
     return (
-        <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col lg:flex-row-reverse">
 
-                <label for="my-modal-6" class="btn modal-button">Update Your Profile</label>
-                <input type="checkbox" id="my-modal-6" class="modal-toggle" />
-                <div class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box">
-                        <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                            <div class="card-body">
-                                <div class="card-body">
+                <label for="my-modal-6" className="btn modal-button">Update Your Profile</label>
+                <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+                <div className="modal modal-bottom sm:modal-middle">
+                    <div className="modal-box">
+                        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                            <div className="card-body">
+                                <div className="card-body">
                                     <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-5 mt-5'>
-                                        <input name='displayName' type="text" value={user.email} className="input input-bordered w-full " />
-                                        <input name='email' type="text" value={user.displayName} className="input input-bordered w-full " />
+                                        <input name='email' type="text" value={user.email} className="input input-bordered w-full " />
+                                        <input name='displayName' type="text" value={user.displayName} className="input input-bordered w-full " />
                                         <input name='phone' type="text" placeholder="Your Phone Number" className="input input-bordered w-full" />
-                                        <input name='address' type="text" placeholder="Your address" className="input input-bordered w-full" />
                                         <input name='location' type="text" placeholder="Your location" className="input input-bordered w-full" />
                                         <input name='education' type="text" placeholder="Your education" className="input input-bordered w-full" />
                                         <input name='profile' type="text" placeholder="Your LinkedIn profile link" className="input input-bordered w-full" />
@@ -64,12 +61,12 @@ const MyProfile = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-action">
-                            <label for="my-modal-6" class="btn">Close</label>
+                        <div className="modal-action">
+                            <label for="my-modal-6" className="btn">Close</label>
                         </div>
                     </div>
                 </div>
-                <div class="text-center lg:text-left">
+                <div className="text-center lg:text-left">
                     <ProfileUpdate></ProfileUpdate>
                 </div>
             </div>

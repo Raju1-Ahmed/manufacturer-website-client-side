@@ -27,8 +27,8 @@ const MyCard = () => {
     return (
         // <div>
         //     <h2>My All Products: {orders.length}</h2>
-        //     <div class="overflow-x-auto">
-        //         <table class="table w-full">
+        //     <div className="overflow-x-auto">
+        //         <table className="table w-full">
         //             <thead>
         //                 <tr>
         //                     <th></th>
@@ -55,8 +55,8 @@ const MyCard = () => {
     //         </tr>)
     //     }
     // </tbody>
-    <div class="overflow-x-auto w-full">
-    <table class="table w-full">
+    <div className="overflow-x-auto w-full">
+    <table className="table w-full">
         {/* <!-- head --> */}
         <thead>
             <tr>

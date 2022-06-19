@@ -26,23 +26,23 @@ const ShowMyCard = ({ order, index }) => {
     return (
         <tr>
             <td>
-                <div class="flex items-center space-x-3">
-                    <div class="avatar">
-                        <div class="mask mask-squircle w-12 h-12">
+                <div className="flex items-center space-x-3">
+                    <div className="avatar">
+                        <div className="mask mask-squircle w-12 h-12">
                             <span>{index + 1}</span>
                         </div>
                     </div>
                     <div>
-                        <div class="font-bold">{service}</div>
+                        <div className="font-bold">{service}</div>
                     </div>
                 </div>
 
             </td>
             <td>
-                <span class="badge badge-accent badge-x">{quantity}</span>
+                <span className="badge badge-accent badge-x">{quantity}</span>
             </td>
             <td>
-                <span class="badge badge-accent badge-x">{price}</span>
+                <span className="badge badge-accent badge-x">{price}</span>
             </td>
             <td>
                 {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}>

@@ -15,11 +15,11 @@ const ProfileUpdate = () => {
             .then(data => setUsers(data))
     }
         , []);
-console.log(user);
+    console.log(user);
     return (
-        <div class="card">
-            <div class="lg:p-8">
-                <h2 class="card-title text-3xl ml-4">User Information</h2>
+        <div className="card">
+            <div className="lg:p-8">
+                <h2 className="card-title text-3xl ml-4">User Information</h2>
                 <p className='text-xl font-mono mb-0'>Email: {users.email}</p>
                 <p className='text-xl font-mono'>Name: {users.displayName}</p>
                 <p className='text-xl font-mono'>Education: {users.education}</p>

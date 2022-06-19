@@ -25,7 +25,7 @@ const ServiceDetails = () => {
             service: service.name,
             price: service.price,
             minimumOrder: service.minimumOrder,
-            quantity: service.availableQuantity,
+            quantity: service.quantity,
             serviceId: serviceId,
             address: event.target.address.value,
             phone: event.target.phone.value
@@ -77,7 +77,7 @@ const ServiceDetails = () => {
                         <label className="label">
                             <span> Quantity:</span>
                         </label>
-                        <input type="text" value={service.availableQuantity} name="quantity" className="input input-bordered w-full max-w-xs" required readOnly />
+                        <input type="text" value={service.quantity} name="quantity" className="input input-bordered w-full max-w-xs" required readOnly />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">

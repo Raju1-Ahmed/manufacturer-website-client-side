@@ -36,13 +36,13 @@ const ManageOrders = () => {
         //     }
         // </div>
 
-        <div class="overflow-x-auto w-full">
-            <table class="table w-full">
+        <div className="overflow-x-auto w-full">
+            <table className="table w-full">
                 <thead>
                     <tr>
                         <th>
                             <label>
-                                <input type="checkbox" class="checkbox" />
+                                <input type="checkbox" className="checkbox" />
                             </label>
                         </th>
                         <th>image or Name </th>
@@ -57,30 +57,30 @@ const ManageOrders = () => {
             key={product._id}>
                         <th>
                             <label>
-                                <input type="checkbox" class="checkbox" />
+                                <input type="checkbox" className="checkbox" />
                             </label>
                         </th>
                         <td>
-                            <div class="flex items-center space-x-3">
-                                <div class="avatar">
-                                    <div class="mask mask-squircle w-12 h-12">
+                            <div className="flex items-center space-x-3">
+                                <div className="avatar">
+                                    <div className="mask mask-squircle w-12 h-12">
                                         <img src={product.image} alt="Avatar Tailwind CSS Component" />
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="font-bold">{product.name}</div>
-                                    <div class="text-sm opacity-50">United States</div>
+                                    <div className="font-bold">{product.name}</div>
+                                    <div className="text-sm opacity-50">United States</div>
                                 </div>
                             </div>
                         </td>
                         <td>
                             <br/>
-                                <span class="badge badge-success badge-x">
+                                <span className="badge badge-success badge-x">
                                    Available Quantity<h1 className='text-primary font-bold'>${product.quantity}</h1> MInimum Order: <h1 className='text-primary font-bold'>${product.minimumOrder}</h1> 
                                 </span>
                         </td>
                         <th>
-                            <button onClick={() => handleDelete(product._id)} class="btn btn-primary btn-xs">details</button>
+                            <button onClick={() => handleDelete(product._id)} className="btn btn-primary btn-xs">details</button>
                         </th>
                     </tr>
             )}

@@ -1,0 +1,56 @@
+[
+    {
+      "_id": 1,
+      "name": "Body Shell",
+      "image": "https://i.ibb.co/gRKkX6V/Body-Shell.png",
+      "description": "GoMechanic Spares is your one-stop solution for all the spare parts your car needs. This Honda Body Shell, Frame Set Fr Bulkhead Upper 04602T6Ek00Zz from Honda is compatible with your car. This Honda Body Shell, Frame Set Fr Bulkhead Upper 04602T6Ek00Zz with part no. 04602T6EK00ZZ comes at a price of ₹1946. Our trusted seller, Parcit offers pan-India delivery",
+      "price": "950",
+      "minimumOrder": "100",
+      "availableQuantity": "2000"
+    },
+    {
+      "_id": 2,
+      "name": "Cooling Fan",
+      "image": "https://i.ibb.co/6XrdVn0/Cooling-Fan.png",
+      "description": "The Tata Cooling Fan, Assy Condenser Shroud Complete Behr 283483400146 offered by Tata is of industrial-grade quality and is compatible with all major cars. This Tata Cooling Fan, Assy Condenser Shroud Complete Behr 283483400146 is available at a competitive price of ₹1992 and is sold by our trusted seller, Parcit. The delivery is available PAN-India.",
+      "price": "900",
+      "minimumOrder": "99",
+      "availableQuantity": "2000"
+    },
+    {
+      "_id": 3,
+      "name": "MGP Radiator Fan ",
+      "image": "https://i.ibb.co/6XrdVn0/Cooling-Fan.png",
+      "description": "The Mgp Radiator Fan Cowling, Fan Assy,Eng Clg 17100M67L00 offered by Mgp is of industrial-grade quality and is compatible with all major cars. This Mgp Radiator Fan Cowling, Fan Assy,Eng Clg 17100M67L00 is available at a competitive price of ₹3285 and is sold by our trusted seller, Parcit. The delivery is available PAN-India",
+      "price": "1600",
+      "minimumOrder": "55",
+      "availableQuantity": "100"
+    },
+    {
+      "_id": 4,
+      "name": "Radiator Support Frame",
+      "image": "https://i.ibb.co/4T1p5WD/Radiator-Support-Frame.png",
+      "description": "The hardest part about replacing a radiator support is cutting the welds. ... at home or those that are trying to make car repairs Fan Assy,Eng Clg 17100M67L00 is available at a competitive price of ₹3285 and is sold by our trusted seller, Parcit. The delivery is available PAN-India",
+      "price": "1155",
+      "minimumOrder": "45",
+      "availableQuantity": "1300"
+    },
+    {
+      "_id": 5,
+      "name": "Radiator Support Frame",
+      "image": "https://i.ibb.co/Lg5QDT0/Panels.png",
+      "description": "Are you wondering How to Repair Aluminum Body Panels? This latest post from Cline Collision Center explains the process and importance.Wheel Arch Repair Panel Upper Rear Pair Set of 2 for Chevy ",
+      "price": "1515",
+      "minimumOrder": "195",
+      "availableQuantity": "5400"
+    },
+    {
+      "_id": 6,
+      "name": "Tool Box",
+      "image": "https://i.ibb.co/S0ZVq9R/Tool-Box.png",
+      "description": "Are you wondering How to Repair Aluminum Body Panels? This latest post from Cline Collision Center explains the process and importance.Wheel Arch Repair Panel Upper Rear Pair Set of 2 for Chevy ",
+      "price": "19",
+      "minimumOrder": "300",
+      "availableQuantity": "6000"
+    }
+  ]

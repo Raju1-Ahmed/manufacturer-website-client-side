@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4c61f7ad.css",
+    "main.js": "/static/js/main.85179f9c.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/profile.JPG": "/static/media/profile.545ddb5caaf1d71bf167.JPG",
+    "static/media/banner-1.jpg": "/static/media/banner-1.57f3ba224b943ae94d06.jpg",
+    "static/media/banner-3.jpg": "/static/media/banner-3.d073ba5bdb3f7878abb4.jpg",
+    "static/media/banner-2.jpg": "/static/media/banner-2.c9737941aea1ab71f5b2.jpg",
+    "static/media/banner-4.jpg": "/static/media/banner-4.1538620629752988aeca.jpg",
+    "static/media/clothingWerehouse.png": "/static/media/clothingWerehouse.a3cc741507e35af50220.png",
+    "static/media/tesla-review.png": "/static/media/tesla-review.4f971da8d1501a89653a.png",
+    "static/media/Home-shop.png": "/static/media/Home-shop.788c3b0b7401fa444377.png",
+    "index.html": "/index.html",
+    "main.4c61f7ad.css.map": "/static/css/main.4c61f7ad.css.map",
+    "main.85179f9c.js.map": "/static/js/main.85179f9c.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c61f7ad.css",
+    "static/js/main.85179f9c.js"
+  ]
+}

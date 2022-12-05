@@ -8,7 +8,7 @@ const ShowMyCard = ({ order, index }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://autoparts.onrender.com/order/${id}`;
             console.log(url);
             fetch(url, {
                 method: 'DELETE'

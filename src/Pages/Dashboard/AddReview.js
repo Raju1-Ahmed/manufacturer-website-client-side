@@ -10,11 +10,11 @@ const AddReview = () => {
             reviewDescription: event.target.reviewDescription.value,
             reviewRate: event.target.reviewRate.value
         }
-        axios.post('http://localhost:5000/review', reviewCollect)
+        axios.post('https://autoparts.onrender.com/review', reviewCollect)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
-                    toast('Your order is booked!!!');
+                    toast('Your Review is Pushed');
                     event.target.reset();
                 }
             })

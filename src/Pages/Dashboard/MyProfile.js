@@ -18,7 +18,7 @@ const MyProfile = () => {
             displayName
         }
         console.log(profile);
-        fetch(`http://localhost:5000/updateuser/${user.email}`, {
+        fetch(`https://autoparts.onrender.com/updateuser/${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

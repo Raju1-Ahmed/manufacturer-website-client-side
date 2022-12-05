@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L3QC3Kn3y7yc6KFiVkjcQcPsm9xnNNybEWaE
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://autoparts.onrender.com/order/${id}`;
     console.log(url);
 
     const { data: detail, isLoading } = useQuery(['Order', id], () => fetch(url, {

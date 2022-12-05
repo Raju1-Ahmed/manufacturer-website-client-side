@@ -8,7 +8,7 @@ const ProfileUpdate = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/users/${user.email}`;
+        const url = `https://autoparts.onrender.com/users/${user.email}`;
         console.log(url);
         fetch(url)
             .then(res => res.json())

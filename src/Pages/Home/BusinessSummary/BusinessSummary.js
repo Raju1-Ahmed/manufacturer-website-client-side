@@ -8,7 +8,7 @@ const BusinessSummary = () => {
         <div className="mb-10">
             <h2 className="text-center text-2xl font-bold">Business Summary...</h2>
 
-            <div className='mb-5 w-full flex justify-center'>
+            <div className='mb-5'>
                 <div className="stats shadow">
 
                     <div className="stat">

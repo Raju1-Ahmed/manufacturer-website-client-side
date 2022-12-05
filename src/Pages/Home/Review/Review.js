@@ -3,7 +3,7 @@ import ShowReview from '../Review/ShowReview'
 const Review = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://autoparts.onrender.com/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []);

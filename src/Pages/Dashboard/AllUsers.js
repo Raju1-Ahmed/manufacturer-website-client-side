@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import UsersTable from './UsersTable';
 
 const AllUsers = () => {
-    const { data: persons, isLoading, refetch } = useQuery('persons', () => fetch('http://localhost:5000/user', {
+    const { data: persons, isLoading, refetch } = useQuery('persons', () => fetch('https://autoparts.onrender.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

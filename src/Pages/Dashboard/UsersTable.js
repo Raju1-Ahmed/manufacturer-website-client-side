@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const UsersTable = ({ person, refetch, index }) => {
     const { email, role } = person;
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://autoparts.onrender.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

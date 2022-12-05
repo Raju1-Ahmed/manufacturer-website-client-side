@@ -4,13 +4,15 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const ServiceDetails = () => {
     const { serviceId } = useParams();
     const [service, setService] = useState({});
     const [user] = useAuthState(auth);
     useEffect(() => {
-        const url = `http://localhost:5000/service/${serviceId}`;
+        const url = `https://autoparts.onrender.com/service/${serviceId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data));
@@ -30,11 +32,11 @@ const ServiceDetails = () => {
             address: event.target.address.value,
             phone: event.target.phone.value
         }
-        axios.post('http://localhost:5000/order', order)
+        axios.post('https://autoparts.onrender.com/order', order)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
-                    toast('Your order is booked!!!');
+                    toast('Your order is booked!!!')
                     event.target.reset();
                 }
             })

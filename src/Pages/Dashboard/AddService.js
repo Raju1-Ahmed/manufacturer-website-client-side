@@ -1,11 +1,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 const AddService = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/service`;
+        const url = `https://autoparts.onrender.com/service`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -15,7 +16,12 @@ const AddService = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+                const {data} = result;
+                if(!data){
+                    toast("Your Product is Uploaded")
+                } else{
+                    toast("Your Product is Not Uploaded !")
+                }
             })
     };
 

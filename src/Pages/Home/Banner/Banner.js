@@ -8,6 +8,9 @@ const Banner = () => {
     return (
         <div>
             <div className="carousel w-full">
+                <div id="item4" className="carousel-item w-full">
+                    <img src={banner4} className="w-full" />
+                </div>
                 <div id="item1" className="carousel-item w-full">
                     <img src={banner1} className="w-full" />
                 </div>
@@ -17,9 +20,7 @@ const Banner = () => {
                 <div id="item3" className="carousel-item w-full">
                     <img src={banner3} className="w-full" />
                 </div>
-                <div id="item4" className="carousel-item w-full">
-                    <img src={banner4} className="w-full" />
-                </div>
+
             </div>
             <div className="flex justify-center w-full py-2 gap-2">
                 <a href="#item1" className="btn btn-xs">1</a>

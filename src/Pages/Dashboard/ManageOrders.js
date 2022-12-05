@@ -7,7 +7,7 @@ const ManageOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://autoparts.onrender.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -80,7 +80,9 @@ const ManageOrders = () => {
                                 </span>
                         </td>
                         <th>
-                            <button onClick={() => handleDelete(product._id)} className="btn btn-primary btn-xs">details</button>
+                            <button onClick={() => handleDelete(product._id)} className="btn btn-primary btn-xs">
+                            <img src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/24/000000/external-social-social-media-basic-others-anggara-putra-15.png"/>
+                                Delete</button>
                         </th>
                     </tr>
             )}

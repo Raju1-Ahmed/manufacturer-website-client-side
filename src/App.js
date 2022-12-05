@@ -17,6 +17,7 @@ import AddReview from './Pages/Dashboard/AddReview';
 import Blog from './Pages/Shared/Blog/Blog';
 import Portfolio from './Pages/Home/Portfolio/Portfolio';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path='/service/:serviceId' element={<RequireAuth><ServiceDetails></ServiceDetails></RequireAuth>}></Route>
       </Routes>
+      <ToastContainer/>
     </div>
 
   );

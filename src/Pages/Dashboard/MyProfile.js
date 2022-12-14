@@ -38,17 +38,12 @@ const MyProfile = () => {
             })
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-
-                <label for="my-modal-6" className="btn modal-button">Update Your Profile</label>
+            <div className="">
                 <input type="checkbox" id="my-modal-6" className="modal-toggle" />
                 <div className="modal modal-bottom sm:modal-middle">
-                    <div className="modal-box">
-                        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                            <div className="card-body">
-                                <div className="card-body">
-                                    <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-5 mt-5'>
+                    <div>
+                        <div className="w-full rounded shadow-2xl bg-base-100">
+                                    <form onSubmit={handleSubmit} className='grid grid-cols-2  gap-5 mt-2 p-5'>
                                         <input name='email' type="text" value={user.email} className="input input-bordered w-full " />
                                         <input name='displayName' type="text" value={user.displayName} className="input input-bordered w-full " />
                                         <input name='phone' type="text" placeholder="Your Phone Number" className="input input-bordered w-full" />
@@ -58,10 +53,8 @@ const MyProfile = () => {
                                         <input type="submit" value='submit' className="btn btn-secondary w-full" />
 
                                     </form>
-                                </div>
-                            </div>
                         </div>
-                        <div className="modal-action">
+                        <div className="modal-action ">
                             <label for="my-modal-6" className="btn">Close</label>
                         </div>
                     </div>
@@ -69,8 +62,12 @@ const MyProfile = () => {
                 <div className="text-center lg:text-left">
                     <ProfileUpdate></ProfileUpdate>
                 </div>
+                <span className='justify-end flex'>
+                <label for="my-modal-6" className="btn modal-button text-green-500">Update Your Profile
+                <img src="https://img.icons8.com/ios-glyphs/38/null/edit-user-female.png"/>
+                </label>
+                </span>
             </div>
-        </div >
 
     );
 };

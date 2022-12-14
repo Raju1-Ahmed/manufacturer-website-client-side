@@ -27,51 +27,40 @@ const AddService = () => {
 
 
     return (
-        <div className='flex h-screen justify-center items-center'>
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <div className="card-body">
+        <div className='p-5 bg-white rounded m-5'>
                 <h2 className="text-center text-2xl font-bold">Add To Card</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)} 
+                className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 ">
 
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                        </label>
-                        <input type="text"   placeholder="name" {...register("name", { required: true, maxLength: 20 })} className="input input-bordered w-full max-w-xs" />
+                    <div className="border-b-2 border-green-500">
+                        <input type="text"   placeholder="Type Name" {...register("Type Name", { required: true, maxLength: 20 })} className="input bg-white  w-full max-w-xs" />
                     </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                        </label>
-                      <textarea className="input input-bordered w-full max-w-xs" placeholder='Description' {...register("description")} />
+                    <div className="border-b-2 border-green-500">
+                      <textarea className="input bg-white w-full max-w-xs" placeholder='Type Description' {...register("description")} />
 
                     </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                        </label>
-                        <input placeholder='Photo URL' type="text"{...register("image")}  className="input input-bordered w-full max-w-xs" />
+                    <div className="border-b-2 border-green-500">
+                        <input placeholder='Type PhotoURL'  type="text"{...register("image")}  className="input bg-white w-full max-w-xs" />
                     </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span> Price:</span>
-                        </label>
-                        <input type="number" {...register("price")} className="input input-bordered w-full max-w-xs" />
+                    <div className="border-b-2 border-green-500">
+                        <input type="number"  placeholder='Type Price' {...register("price")} className="input bg-white w-full max-w-xs" />
                     </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span> Minimum Orders:</span>
-                        </label>
-                        <input type="number" {...register("minimumOrder")}  className="input input-bordered w-full max-w-xs"  />
+                    <div className="border-b-2 border-green-500">
+                        <input type="number"  placeholder='Type Minimum Order' {...register("minimumOrder")}  className="input bg-white w-full max-w-xs"  />
                     </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span> Quantity:</span>
-                        </label>
-                        <input type="number" {...register("quantity")}  className="input input-bordered w-full max-w-xs" />
+                    <div className="border-b-2 border-green-500">
+                        <input type="number" placeholder='Type Quantity' {...register("quantity")}  className="input bg-white w-full max-w-xs" />
                     </div>
-                    <input className='btn mt-3 w-full max-w-xs text-white' type="submit" value="Add" />
+                   
                 </form>
-            </div>
+                   <span className='mt-5 flex items-end justify-end'>
+                  <div className='w-40 p-3  rounded  bg-green-400 hover:bg-green-800 flex'>
+                  <input className='mr-2 text-green-900 text-lg hover:text-white' type="submit" value="Add Product" />
+                  <img src="https://img.icons8.com/ios/30/null/add-property.png"/>
+
+                  </div>
+                    </span>
         </div>
-    </div >
     );
 };
 

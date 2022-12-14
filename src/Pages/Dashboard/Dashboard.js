@@ -11,21 +11,34 @@ const Dashboard = ({ role }) => {
         <div className="drawer drawer-mobile ">
             <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-                <h2 className='text-2xl font-bold text-purple-500'>Welcome to your Dashboard</h2>
-                <Outlet></Outlet>
+               
+                <Outlet>
+                </Outlet>
             </div>
-            <div className="drawer-side border-r-4">
+            <div className="drawer-side">
                 <label for="dashboard-sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-48  text-base-content">
-                    <li><Link to="/dashboard/myprofile">My Profile</Link></li>
+                    <li><Link to="/dashboard/myprofile">
+                    <img src="https://img.icons8.com/ios/30/null/test-account.png"/>
+                         PROFILE</Link></li>
                     {admin ?
                         <>
-                            <li><Link to="/dashboard/users">All Users</Link></li>
-                            <li><Link to="/dashboard/addservice">Add Service</Link></li>
-                            <li><Link to="/dashboard/manageorder">Manage Products</Link></li> </>
+                            <li><Link to="/dashboard/users">
+                                 <img src="https://img.icons8.com/ios/30/null/conference-call--v1.png"/>
+                                USERS</Link></li>
+                            <li><Link to="/dashboard/addservice">
+                            <img src="https://img.icons8.com/ios/30/null/add--v1.png"/>
+                                SERVICES</Link></li>
+                            <li><Link to="/dashboard/manageorder">
+                            <img src="https://img.icons8.com/ios/30/null/request-service.png"/>
+                                PRODUCTS</Link></li> </>
                         : <>
-                            <li><Link to="/dashboard/myCard">My Card</Link></li>
-                            <li><Link to="/dashboard/addreview">Review</Link></li>
+                            <li><Link to="/dashboard/myCard">
+                            <img src="https://img.icons8.com/ios/30/null/report-card.png"/>
+                                CARD</Link></li>
+                            <li><Link to="/dashboard/addreview">
+                            <img src="https://img.icons8.com/ios/30/null/overview-pages-2.png"/>
+                            OVERVIEW</Link></li>
                         </>}
                 </ul>
 

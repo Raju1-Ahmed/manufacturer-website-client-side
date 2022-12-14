@@ -5,12 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const BusinessSummary = () => {
     return (
-        <div className="mb-10">
-            <h2 className="text-center text-2xl font-bold">Business Summary...</h2>
-
-            <div className='mb-5'>
-                <div className="stats shadow">
-
+        <div className="mb-44 mt-44">
+            <h2 className="text-center mb-16  text-2xl font-bold">Business Summary...</h2>
+            <div className=''>
+                <div className="stats shadow grid grid-cols-4 w-full">
                     <div className="stat">
                         <div className="stat-figure text-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>

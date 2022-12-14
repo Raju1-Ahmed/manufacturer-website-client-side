@@ -9,18 +9,19 @@ const Product = ({ product }) => {
         navigate(`/service/${id}`);
     }
     return (
-        <div className="card lg:max-w-lg bg-base-100  shadow-xl">
+        <div className="card lg:max-w-lg bg-base-100  shadow-xl p-0">
             <div className="card-body text-center">
-                <img src={image} alt="" />
-                <h2 className="text-xl font-bold ">{name}</h2>
-                <h4 className='text-sm text-accent-content'>{description.slice(0, 100)}</h4>
-                <div className="card-actions justify-end">
-                    <div className="badge ">Price: {price}$</div>
+                <img src={image} alt=""  className='w-76'/>
+                <h2 className="text-xl font-bold text-left ">{name}</h2>
+                <h4 className='text-sm text-accent-content text-left'>{description.slice(0, 100)}</h4>
+                <div className="card-actions justify-start">
+                    <div className="badge">Price: {price}$</div>
                     <div className="badge ">Minimum Order: {minimumOrder}</div>
-                </div>
-                <div className="card-actions justify-end">
                     <div className="badge">Available Quantity: {quantity}</div>
-                <button  onClick={() => navigateToServiceDetail(_id)}  className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Purchase</button>
+                </div>
+                <div className="card-actions justify-start">
+                <button  onClick={() => navigateToServiceDetail(_id)}  className="btn btn-xs text-green-400 sm:btn-sm md:btn-md lg:btn-lg">Purchase
+                <img src="https://img.icons8.com/nolan/40/fast-cart.png" className='p-3'/>                </button>
                 </div>
             </div>
         </div>

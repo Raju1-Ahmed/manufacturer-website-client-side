@@ -28,10 +28,14 @@ const UsersTable = ({ person, refetch, index }) => {
         <tr>
             <th>{index + 1}</th>
             <td>{email}</td>
-            <td>{role !== 'admin' && <button  onClick={makeAdmin} className="btn btn-accent btn-xs">Make Admin</button>}
+            <td>{role !== 'admin' && <button  onClick={makeAdmin} className="btn btn-accent btn-xs">
+            <img src="https://img.icons8.com/ios/20/null/admin-settings-male.png" />
+                Make Admin</button>}
                 {role === 'admin' && <button disabled className="btn btn-accent btn-xs">Already have an Admin</button>}
             </td>
-            <td><button className="btn btn-primary btn-xs">Remove User</button></td>
+            <td><button className="btn btn-primary btn-xs">
+            <img src="https://img.icons8.com/ios/20/null/delete-forever--v1.png"/>
+                Remove User</button></td>
         </tr>
     );
 };

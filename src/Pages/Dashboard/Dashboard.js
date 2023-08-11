@@ -11,7 +11,6 @@ const Dashboard = ({ role }) => {
         <div className="drawer drawer-mobile ">
             <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-               
                 <Outlet>
                 </Outlet>
             </div>

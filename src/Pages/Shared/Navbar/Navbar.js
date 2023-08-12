@@ -22,12 +22,12 @@ const Navbar = () => {
         <>
             <li><Link to="/" className="hover:bg-gray-300">Home</Link></li>
             <li><Link to="/blog" className="hover:bg-gray-300">Blog</Link></li>
-            <li><Link to="/portfolio" className="hover:bg-gray-300">Portfolio</Link></li>
+            <li><Link to="/about" className="hover:bg-gray-300">Abou-us</Link></li>
         </>
     );
 
     return (
-        <div className="navbar bg-blue-500 text-white">
+        <div className="navbar  mb-5 text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden text-xl">

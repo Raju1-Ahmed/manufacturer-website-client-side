@@ -1,57 +1,86 @@
 import React from 'react';
 
+const blogData = [
+    {
+      id: 1,
+      title: 'The Importance of Regular Car Maintenance',
+      date: 'August 1, 2023',
+      content: `
+        Regular car maintenance is essential to ensure the longevity and optimal performance of your vehicle. 
+        Neglecting maintenance tasks can lead to costly repairs down the road. Learn about the key maintenance 
+        tasks you should never ignore and how they can save you money in the long run.`,
+      category: 'Car Maintenance',
+    },
+    {
+      id: 2,
+      title: 'Top 10 Must-Have Auto Car Parts for DIY Repairs',
+      date: 'August 5, 2023',
+      content: `
+        If you enjoy working on your car and performing DIY repairs, having the right auto parts on hand is crucial. 
+        Discover our list of the top 10 essential car parts that every DIY enthusiast should have in their toolkit.`,
+      category: 'Car Parts',
+    },
+    {
+      id: 3,
+      title: 'How to Change Your Car Oil',
+      date: 'August 10, 2023',
+      content: `
+        In this comprehensive step-by-step guide, we will walk you through the process of changing your car's oil. 
+        Regular oil changes are vital for maintaining engine health and performance. Follow our instructions and keep your engine running smoothly.`,
+      category: 'Car Maintenance',
+    },
+    {
+      id: 4,
+      title: 'Choosing the Right Tires for Your Car',
+      date: 'August 15, 2023',
+      content: `
+        Your car's tires play a crucial role in safety and performance. Learn how to select the best tires for your vehicle 
+        based on factors like weather conditions, driving habits, and road terrain.`,
+      category: 'Car Parts',
+    },
+    {
+      id: 5,
+      title: 'DIY Brake Replacement: Step-by-Step Guide',
+      date: 'August 20, 2023',
+      content: `
+        Proper brake maintenance is vital for safe driving. Follow our detailed guide to replace your car's brake pads and 
+        ensure optimal braking performance. Save money by doing it yourself with our easy-to-follow instructions.`,
+      category: 'DIY Repairs',
+    },
+    // Add more blog posts here
+  ];
+
+const BlogPost = ({ title, date, content, category }) => {
+  return (
+    <div className="bg-white p-6 shadow-lg rounded-lg mb-8">
+      <h2 className="text-2xl font-semibold mb-2">{title}</h2>
+      <p className="text-gray-500 text-sm mb-1">{date}</p>
+      <p className="text-indigo-600 text-sm font-medium">{category}</p>
+      <p className="text-gray-700 mt-4">{content}</p>
+    </div>
+  );
+};
+
 const Blog = () => {
-    return (
-        <div className='container'>
-            <div className='row  d-flex justify-content-center'>
-                <div className='col-md-4 col-lg-12 mt-5'>
-                    <h2 style={{ fontSize: "20px" }} className=' text-muted'>
-                        <span className='text-danger text-small'>No.1/will you improve the performance of a React Application?: </span><br />How
-                        A modern front-end library like React doesn't magically make your app faster. It requires the developer to understand how React works and how the components live through the various phases of the component lifecycle.Users interact with the UI and cause the data to change. Whether the interaction involves clicking a button, tapping on an image, dragging list items around, AJAX requests invoking APIs, etc., all those interactions only change the data. They never cause the UI to change directly.</h2>
-
-                    <br />
-                    <br />
-
-                    <h2 style={{ fontSize: "20px" }} className='text-muted '>
-                        <span className='text-danger '>No.2/What are the different ways to manage a state in a React application?: </span><br />
-                        The state is just a fancy term for a JavaScript data structure. If a user changes state by interacting with your application, the UI may look completely different afterwards, because it's represented by this new state rather than the old state.Hooks are backwards-compatible, which means it doesn't keep any breaking changes. React provides some built-in Hooks like useState, UseEffect and useReducer etc. You can also make custom hooks.</h2>
-                    <br />
-                    <br />
-                    <h2 style={{ fontSize: "20px" }} className=' text-muted '>
-                        <span className='text-danger '>No.3/How does prototypical inheritance work?:
-                        </span><br />
-                        For instance, we have a user object with its properties and methods, and want to make admin and guest as slightly modified variants of it. We like to reuse what we have in user, not copy/reimplement its methods, just build a new object on top of it.Actually a super-important thing, because we may have a big object with many methods, and have objects that inherit from it. And when the inheriting objects run the inherited methods, they will modify only their own states, not the state of the big object.</h2>
-                    <br />
-                    <br />
-                    <h2 style={{ fontSize: "20px" }} className=' text-muted '>
-                        <span className='text-danger '>No.4/  You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?:
-                        </span><br />
-                        You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?
-                        Create two extra space, i.e. two extra arrays to store the product of all the array elements from start, up to that index and another array to store the product of all the array elements from the end of the array to that index.To get the product excluding that index, multiply the prefix product up to index i-1 with the suffix product up to index i+1.Create an array product and initialize its value to 1 and a variable temp = 1.initialize temp = 1 and traverse the array from last index to start.</h2>
-                    <br />
-                    <br />
-                    <h2 style={{ fontSize: "20px" }} className=' text-muted '>
-                        <span className='text-danger '>No.5/What is a unit test? Why should write unit tests?:
-                        </span><br />
-                        Unit testing is a type of software testing where individual units or software components are tested. Its purpose is to validate that each unit of code performs as expected. A unit can be anything you want it to be — a line of code, a method, or a class.Unit tests save time and money. Usually, we tend to test the happy path more than the unhappy path.Well-written unit tests act as documentation for your code. Any developer can quickly look at your tests and know the purpose of your functions.</h2>
-                
-                        <h2 style={{ fontSize: "20px" }} className=' text-muted '>
-                        <span className='text-danger '>No.5/What is a unit test? Why should write unit tests?:
-                        </span><br />
-                        Unit testing is a type of software testing where individual units or software components are tested. Its purpose is to validate that each unit of code performs as expected. A unit can be anything you want it to be — a line of code, a method, or a class.Unit tests save time and money. Usually, we tend to test the happy path more than the unhappy path.Well-written unit tests act as documentation for your code. Any developer can quickly look at your tests and know the purpose of your functions.</h2>
-                    <h2 style={{ fontSize: "20px" }} className=' text-muted '>
-                        <span className='text-danger '>No.5/What is a unit test? Why should write unit tests?:
-                        </span><br />
-                        Unit testing is a type of software testing where individual units or software components are tested. Its purpose is to validate that each unit of code performs as expected. A unit can be anything you want it to be — a line of code, a method, or a class.Unit tests save time and money. Usually, we tend to test the happy path more than the unhappy path.Well-written unit tests act as documentation for your code. Any developer can quickly look at your tests and know the purpose of your functions.</h2>
-                
-                        <h2 style={{ fontSize: "20px" }} className=' text-muted '>
-                        <span className='text-danger '>No.5/What is a unit test? Why should write unit tests?:
-                        </span><br />
-                        Unit testing is a type of software testing where individual units or software components are tested. Its purpose is to validate that each unit of code performs as expected. A unit can be anything you want it to be — a line of code, a method, or a class.Unit tests save time and money. Usually, we tend to test the happy path more than the unhappy path.Well-written unit tests act as documentation for your code. Any developer can quickly look at your tests and know the purpose of your functions.</h2>
-                </div>
-            </div>
+  return (
+    <div className="bg-gray-100 min-h-screen font-sans">
+      <header className="bg-blue-700 text-white py-6">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl font-semibold">Auto Parts Blog</h1>
         </div>
-    );
+      </header>
+      <main>
+        <div className="container mx-auto mt-16">
+          <h1 className="text-4xl font-bold mb-10">Welcome to Our Auto Parts Blog</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogData.map((post) => (
+              <BlogPost key={post.id} {...post} />
+            ))}
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 };
 
 export default Blog;

@@ -18,6 +18,7 @@ import Blog from './Pages/Shared/Blog/Blog';
 import Portfolio from './Pages/Home/Portfolio/Portfolio';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import { ToastContainer } from 'react-toastify';
+import AboutUs from './Pages/Home/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog/>} />
+        <Route path="/about" element={<AboutUs/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route path="/dashboard/myprofile" element={<MyProfile />} />

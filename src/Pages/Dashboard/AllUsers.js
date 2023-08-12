@@ -4,19 +4,31 @@ import Loading from '../Shared/Loading';
 import UsersTable from './UsersTable';
 
 const AllUsers = () => {
-    const { data: persons, isLoading, refetch } = useQuery('persons', () => fetch('https://autoparts.onrender.com/user', {
-        method: 'GET',
-        headers: {
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
-        }
-    }).then(res => res.json()));
+    const { data: persons, isLoading, error, refetch } = useQuery('persons', () =>
+        fetch('https://autoparts.onrender.com/user', {
+            method: 'GET',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+            },
+        }).then((res) => res.json())
+    );
+
     if (isLoading) {
-        return <Loading></Loading>
+        return <Loading />;
     }
+
+    if (error) {
+        return <div>Error loading data</div>; // You can provide a more detailed error message here
+    }
+
+    if (!Array.isArray(persons)) {
+        return <div>Unexpected data format</div>;
+    }
+
     return (
         <div className='mt-8'>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
+            <div className='overflow-x-auto'>
+                <table className='table w-full'>
                     <thead>
                         <tr>
                             <th></th>
@@ -26,14 +38,14 @@ const AllUsers = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            persons.map((person, index) => <UsersTable
+                        {persons.map((person, index) => (
+                            <UsersTable
                                 key={person._id}
                                 person={person}
                                 refetch={refetch}
                                 index={index}
-                            ></UsersTable>)
-                        }
+                            ></UsersTable>
+                        ))}
                     </tbody>
                 </table>
             </div>

@@ -42,68 +42,140 @@ const ServiceDetails = () => {
             })
     }
     return (
-        <div className=''>
-            <div className="container mt-16 mb-48 bg-base-100 shadow-xl p-5">
-                <h2 className="text-center text-2xl font-bold">Add To Card</h2>
-                <form onSubmit={handlePlaceOrder}>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5">
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                User Name:
-                            </label>
-                            <input type="email" value={user?.displayName} name="name" placeholder="name" className="input input-bordered w-full max-w-xs" required readOnly />
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                User Email:
-                            </label>
-                            <input type="email" value={user?.email} name="email" placeholder="name" className="input input-bordered w-full max-w-xs" required readOnly />
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                Product name:
-                            </label>
-                            <input type="text" value={service.name} name="service" className="input input-bordered w-full max-w-xs" required readOnly />
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span> Price:</span>
-                            </label>
-                            <input type="text" value={service.price} name="price" className="input input-bordered w-full max-w-xs" required readOnly />
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span> Minimum Orders:</span>
-                            </label>
-                            <input type="text" value={service.minimumOrder} name="minimumOrder" className="input input-bordered w-full max-w-xs" required readOnly />
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span> Quantity:</span>
-                            </label>
-                            <input type="text" value={service.quantity} name="quantity" className="input input-bordered w-full max-w-xs" required readOnly />
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                            </label>
-                            <input type="text" placeholder='Type Your Address' name="address" className="input input-bordered w-full max-w-xs" />
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                            </label>
-                            <input type="text"  name="phone" placeholder='Type Your Phono Number' className="input input-bordered w-full max-w-xs" />
-                        </div>
-                    </div>
-                    <span className='mt-5 flex items-end justify-end'>
-                  <div className='w-36 p-2 rounded  bg-green-400 hover:bg-green-800 flex'>
-                  <input className=' text-green-900 text-lg hover:text-white' type="submit" value="Get Products" />
-                    <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/32/null/external-add-product-shopping-and-commerce-smashingstocks-glyph-smashing-stocks.png"/>
-                  </div>
-                    </span>
-                </form>
+        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="w-full max-w-md p-6 bg-white shadow-lg rounded-lg">
+          <h2 className="text-3xl font-semibold mb-6 text-center">Add To Cart</h2>
+          <form onSubmit={handlePlaceOrder} className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label htmlFor="userName" className="block text-sm font-medium text-gray-700">
+                  User Name:
+                </label>
+                <input
+                  type="text"
+                  id="userName"
+                  value={user?.displayName}
+                  name="name"
+                  className="input input-bordered w-full"
+                  required
+                  readOnly
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="userEmail" className="block text-sm font-medium text-gray-700">
+                  User Email:
+                </label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  value={user?.email}
+                  name="email"
+                  className="input input-bordered w-full"
+                  required
+                  readOnly
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="productName" className="block text-sm font-medium text-gray-700">
+                  Product Name:
+                </label>
+                <input
+                  type="text"
+                  id="productName"
+                  value={service.name}
+                  name="service"
+                  className="input input-bordered w-full"
+                  required
+                  readOnly
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="productPrice" className="block text-sm font-medium text-gray-700">
+                  Price:
+                </label>
+                <input
+                  type="text"
+                  id="productPrice"
+                  value={service.price}
+                  name="price"
+                  className="input input-bordered w-full"
+                  required
+                  readOnly
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="minOrders" className="block text-sm font-medium text-gray-700">
+                  Minimum Orders:
+                </label>
+                <input
+                  type="text"
+                  id="minOrders"
+                  value={service.minimumOrder}
+                  name="minimumOrder"
+                  className="input input-bordered w-full"
+                  required
+                  readOnly
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="quantity" className="block text-sm font-medium text-gray-700">
+                  Quantity:
+                </label>
+                <input
+                  type="text"
+                  id="quantity"
+                  value={service.quantity}
+                  name="quantity"
+                  className="input input-bordered w-full"
+                  required
+                  readOnly
+                />
+              </div>
+              <div className="space-y-2 col-span-2">
+                <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                  Address:
+                </label>
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="Type Your Address"
+                  name="address"
+                  className="input input-bordered w-full"
+                  required
+                />
+              </div>
+              <div className="space-y-2 col-span-2">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                  Phone Number:
+                </label>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="Type Your Phone Number"
+                  name="phone"
+                  className="input input-bordered w-full"
+                  required
+                />
+              </div>
             </div>
-        </div >
+            <div className="flex items-center justify-end">
+              <button
+                type="submit"
+                className="btn btn-primary flex items-center space-x-2 px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white"
+              >
+                Get Products
+                <img
+                  src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/32/null/external-add-product-shopping-and-commerce-smashingstocks-glyph-smashing-stocks.png"
+                  alt="Add Product"
+                  className="w-6 h-6 ml-2"
+                />
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
     );
 };
 
